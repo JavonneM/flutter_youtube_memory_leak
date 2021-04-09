@@ -172,7 +172,23 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             SizedBox(
-              height: 300,
+              height: 150,
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
             ),
             YoutubePlayerIFrame(
               controller: _controller,
