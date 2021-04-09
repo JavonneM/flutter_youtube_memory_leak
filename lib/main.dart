@@ -141,9 +141,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: double.infinity,
                 child: Stack(
                   children: <Widget>[
-                    YoutubePlayerIFrame(
-                      controller: _controller,
-                    ),
                     InAppWebView(
                       initialOptions: InAppWebViewGroupOptions(
                         // android: AndroidInAppWebViewOptions(),
@@ -177,37 +174,8 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               height: 300,
             ),
-            // YoutubePlayerIFrame(
-            //   controller: _controller,
-            // ),
-            AspectRatio(
-              aspectRatio: 16 / 9,
-              child: Container(
-                width: double.infinity,
-                child: Stack(
-                  children: <Widget>[
-                    InAppWebView(
-                      initialOptions: InAppWebViewGroupOptions(
-                        // android: AndroidInAppWebViewOptions(),
-                        ios: IOSInAppWebViewOptions(
-                          allowsInlineMediaPlayback: true,
-                        ),
-                        crossPlatform: InAppWebViewOptions(
-                          disableHorizontalScroll: true,
-                          disableVerticalScroll: true,
-                          mediaPlaybackRequiresUserGesture: false,
-                        ),
-                      ),
-                      initialUrlRequest: URLRequest(
-                        url: Uri.parse(
-                            'https://media3.giphy.com/media/BZity0rWNCMSsSIRXK/giphy.gif?cid=ecf05e4734d03cab8d2ad84b73d1001ebc3104457eefd116&rid=giphy.gif&ct=s'),
-                      ),
-                      onLoadStop: (InAppWebViewController controller,
-                          Uri? url) async {},
-                    ),
-                  ],
-                ),
-              ),
+            YoutubePlayerIFrame(
+              controller: _controller,
             ),
           ],
         ),
